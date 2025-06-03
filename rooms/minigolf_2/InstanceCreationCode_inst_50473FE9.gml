@@ -1,1 +1,2 @@
-targetRoom = minigolf_3
+targetRoom = minigolf_3b
+targetDoor = "A"

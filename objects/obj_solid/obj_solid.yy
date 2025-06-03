@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_solid",
   "spriteId": {
-    "name": "spr_wallgreen",
-    "path": "sprites/spr_wallgreen/spr_wallgreen.yy",
+    "name": "spr_collisionblueblock",
+    "path": "sprites/spr_collisionblueblock/spr_collisionblueblock.yy",
   },
   "solid": false,
   "visible": false,

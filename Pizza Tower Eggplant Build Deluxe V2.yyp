@@ -2551,6 +2551,7 @@
     {"id":{"name":"spr_doorunvisited","path":"sprites/spr_doorunvisited/spr_doorunvisited.yy",},"order":22,},
     {"id":{"name":"scr_player_machslide","path":"scripts/scr_player_machslide/scr_player_machslide.yy",},"order":85,},
     {"id":{"name":"obj_vomit","path":"objects/obj_vomit/obj_vomit.yy",},"order":24,},
+    {"id":{"name":"spr_collisionblueblock","path":"sprites/spr_collisionblueblock/spr_collisionblueblock.yy",},"order":52,},
     {"id":{"name":"obj_car","path":"objects/obj_car/obj_car.yy",},"order":10,},
     {"id":{"name":"spr_pepperdoor","path":"sprites/spr_pepperdoor/spr_pepperdoor.yy",},"order":18,},
     {"id":{"name":"spr_pepperdoor_closed","path":"sprites/spr_pepperdoor_closed/spr_pepperdoor_closed.yy",},"order":163,},
@@ -3749,6 +3750,7 @@
     {"id":{"name":"spr_player_ratmountattack","path":"sprites/spr_player_ratmountattack/spr_player_ratmountattack.yy",},"order":23,},
     {"id":{"name":"spr_indiancheese_axe","path":"sprites/spr_indiancheese_axe/spr_indiancheese_axe.yy",},"order":1,},
     {"id":{"name":"spr_pizzacollect5","path":"sprites/spr_pizzacollect5/spr_pizzacollect5.yy",},"order":4,},
+    {"id":{"name":"minigolf_3b","path":"rooms/minigolf_3b/minigolf_3b.yy",},"order":16,},
     {"id":{"name":"obj_jumpdust","path":"objects/obj_jumpdust/obj_jumpdust.yy",},"order":37,},
     {"id":{"name":"obj_40","path":"objects/obj_40/obj_40.yy",},"order":13,},
     {"id":{"name":"spr_chigaco","path":"sprites/spr_chigaco/spr_chigaco.yy",},"order":32,},
@@ -4895,6 +4897,7 @@
     {"roomId":{"name":"war_7","path":"rooms/war_7/war_7.yy",},},
     {"roomId":{"name":"war_8","path":"rooms/war_8/war_8.yy",},},
     {"roomId":{"name":"war_9","path":"rooms/war_9/war_9.yy",},},
+    {"roomId":{"name":"minigolf_3b","path":"rooms/minigolf_3b/minigolf_3b.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":14,},
