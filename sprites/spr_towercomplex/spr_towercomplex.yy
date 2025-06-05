@@ -93,7 +93,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Unorganized",
-    "path": "folders/Sprites/Unorganized.yy",
+    "name": "Tower BGs",
+    "path": "folders/Sprites/Backgrounds/Tower BGs.yy",
   },
 }
