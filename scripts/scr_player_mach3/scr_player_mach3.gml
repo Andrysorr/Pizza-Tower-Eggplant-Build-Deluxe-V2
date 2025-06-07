@@ -184,17 +184,48 @@ function scr_player_mach3() { //scr_player_mach3
 	        sprite_index = spr_shotgunsuplexdash
 	}
 	if (((!grounded) && (place_meeting((x + hsp), y, obj_solid) || scr_solid_slope((x + hsp), y)) && (!(place_meeting((x + hsp), y, obj_destructibles))) && (!(place_meeting((x + hsp), y, obj_mach3solid))) && (!(place_meeting((x + hsp), y, obj_metalblock)))) || (grounded && (place_meeting((x + sign(hsp)), (y - 16), obj_solid) || scr_solid_slope((x + sign(hsp)), (y - 16))) && (!(place_meeting((x + hsp), y, obj_destructibles))) && (!(place_meeting((x + hsp), y, obj_mach3solid))) && (!(place_meeting((x + hsp), y, obj_metalblock))) && place_meeting(x, (y + 1), obj_slope)))
-	{
-		wallspeed = movespeed
-		if (vsp > 0)
-			wallspeed -= vsp
-		state = (37 << 0)
-	}
-	if ((!grounded) && place_meeting((x + sign(hsp)), y, obj_climbablewall) && (!(place_meeting((x + sign(hsp)), y, obj_destructibles))) && (!(place_meeting((x + sign(hsp)), y, obj_metalblock))))
-	{
-		wallspeed = movespeed
-		state = (37 << 0)
-	}
+
+            {
+
+                var _climb = true
+
+                if _climb
+
+                {
+
+                    wallspeed = movespeed
+
+                    if (movespeed < 1)
+
+                        wallspeed = 1
+
+                    else
+
+                        movespeed = wallspeed
+
+                    state = (37 << 0)
+
+                }
+
+            }
+
+            if ((!grounded) && place_meeting((x + sign(hsp)), y, obj_climbablewall) && (!(place_meeting((x + sign(hsp)), y, obj_destructibles))) && (!(place_meeting((x + sign(hsp)), y, obj_metalblock))))
+
+            {
+
+                _climb = true
+
+                if _climb
+
+                {
+
+                    wallspeed = movespeed
+
+                    state = (37 << 0)
+
+                }
+
+            }
 	if ((scr_solid((x + 1), y) && (xscale == 1)) && ((!scr_slope()) && ((!place_meeting((x + sign(hsp)), y, obj_slope)) && ((!place_meeting((x + sign(hsp)), y, obj_metalblock)) && ((!place_meeting((x + sign(hsp)), y, obj_destructibles)) && (grounded || (fightball == 1)))))))
 	{
 	    if (fightball == 0)

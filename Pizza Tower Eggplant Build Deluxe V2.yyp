@@ -1905,6 +1905,7 @@
     {"id":{"name":"spr_punchdust","path":"sprites/spr_punchdust/spr_punchdust.yy",},"order":50,},
     {"id":{"name":"spr_cloudeffect","path":"sprites/spr_cloudeffect/spr_cloudeffect.yy",},"order":11,},
     {"id":{"name":"spr_bangeffect","path":"sprites/spr_bangeffect/spr_bangeffect.yy",},"order":4,},
+    {"id":{"name":"rm_stufftesting_2","path":"rooms/rm_stufftesting_2/rm_stufftesting_2.yy",},"order":4,},
     {"id":{"name":"bg_warlabpillar","path":"sprites/bg_warlabpillar/bg_warlabpillar.yy",},"order":3,},
     {"id":{"name":"spr_hurteffect","path":"sprites/spr_hurteffect/spr_hurteffect.yy",},"order":26,},
     {"id":{"name":"bg_dungeonsilouhette4","path":"sprites/bg_dungeonsilouhette4/bg_dungeonsilouhette4.yy",},"order":8,},
@@ -4356,6 +4357,7 @@
     {"id":{"name":"obj_panicdebris","path":"objects/obj_panicdebris/obj_panicdebris.yy",},"order":12,},
     {"id":{"name":"sfx_superjumphold","path":"sounds/sfx_superjumphold/sfx_superjumphold.yy",},"order":17,},
     {"id":{"name":"sfx_superjumprelease","path":"sounds/sfx_superjumprelease/sfx_superjumprelease.yy",},"order":18,},
+    {"id":{"name":"rm_stufftesting_1","path":"rooms/rm_stufftesting_1/rm_stufftesting_1.yy",},"order":3,},
     {"id":{"name":"sfx_noisewoah","path":"sounds/sfx_noisewoah/sfx_noisewoah.yy",},"order":0,},
     {"id":{"name":"spr_chateaucandle","path":"sprites/spr_chateaucandle/spr_chateaucandle.yy",},"order":7,},
     {"id":{"name":"sfx_level100percent","path":"sounds/sfx_level100percent/sfx_level100percent.yy",},"order":1,},
@@ -4902,7 +4904,12 @@
     {"roomId":{"name":"war_8","path":"rooms/war_8/war_8.yy",},},
     {"roomId":{"name":"war_9","path":"rooms/war_9/war_9.yy",},},
     {"roomId":{"name":"minigolf_3b","path":"rooms/minigolf_3b/minigolf_3b.yy",},},
+<<<<<<< Updated upstream
     {"roomId":{"name":"tower_entrance","path":"rooms/tower_entrance/tower_entrance.yy",},},
+=======
+    {"roomId":{"name":"rm_stufftesting_1","path":"rooms/rm_stufftesting_1/rm_stufftesting_1.yy",},},
+    {"roomId":{"name":"rm_stufftesting_2","path":"rooms/rm_stufftesting_2/rm_stufftesting_2.yy",},},
+>>>>>>> Stashed changes
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":14,},

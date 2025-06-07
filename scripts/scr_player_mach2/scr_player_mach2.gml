@@ -107,16 +107,47 @@ function scr_player_mach2() //scr_player_mach2
     if key_jump
         input_buffer_jump = 0
     if (((!grounded) && (place_meeting((x + hsp), y, obj_solid) || scr_solid_slope((x + hsp), y)) && (!(place_meeting((x + hsp), y, obj_destructibles)))) || (grounded && (place_meeting((x + sign(hsp)), (y - 16), obj_solid) || scr_solid_slope((x + sign(hsp)), (y - 16))) && (!(place_meeting((x + hsp), y, obj_destructibles))) && (!(place_meeting((x + hsp), y, obj_metalblock))) && place_meeting(x, (y + 1), obj_slope)))
+
     {
-        wallspeed = movespeed
-        if (vsp > 0)
-            wallspeed -= vsp
-        state = (37 << 0)
+
+        var _climb = true
+
+        if _climb
+
+        {
+
+            wallspeed = movespeed
+
+            if (movespeed < 1)
+
+                wallspeed = 1
+
+            else
+
+                movespeed = wallspeed
+
+            state = (37 << 0)
+
+        }
+
     }
+
     if ((!grounded) && place_meeting((x + sign(hsp)), y, obj_climbablewall) && (!(place_meeting((x + sign(hsp)), y, obj_destructibles))) && (!(place_meeting((x + sign(hsp)), y, obj_metalblock))))
+
     {
-        wallspeed = movespeed
-        state = (37 << 0)
+
+        _climb = true
+
+        if _climb
+
+        {
+
+            wallspeed = movespeed
+
+            state = (37 << 0)
+
+        }
+
     }
     if ((!instance_exists(dashcloudid)) && grounded)
     {
@@ -243,17 +274,48 @@ function scr_player_mach2() //scr_player_mach2
         sprite_index = spr_clown
     if mortjump
         sprite_index = spr_player_mortjumpstart
-    if key_slap2
+    if ((key_slap2 || input_buffer_slap < 8) && (!key_up) && sprite_index != spr_suplexbump)
+
     {
+
         sprite_index = spr_suplexdash
-        suplexmove = 1
-        suplexdashsnd = audio_play_sound(sfx_suplexdash, 1, false)
+
+        suplexmove = true
+
+        suplexdashsnd = audio_play_sound(sfx_suplexdash, 1, 0)
+
         sfx_gain(suplexdashsnd)
+
         state = (42 << 0)
+
         if (movespeed < 5)
+
             movespeed = 5
+
         image_index = 0
-        flash = 1
+
+        flash = true
+
+    }
+
+    else if ((key_slap2 || input_buffer_slap < 8) && key_up && sprite_index != spr_suplexbump)
+
+    {
+
+        state = (80 << 0)
+
+        image_index = 0
+
+        sprite_index = spr_player_breakdanceuppercut
+
+        vsp = -10
+
+        movespeed = hsp
+
+                particle_set_scale((4 << 0), xscale, 1)
+
+        create_particle(x, y, (4 << 0), 0)
+
     }
     if (key_shoot2 && shotgunAnim == 1)
         scr_shotgunshoot()

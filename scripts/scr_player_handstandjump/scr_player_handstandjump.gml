@@ -104,24 +104,23 @@ function scr_player_handstandjump() //scr_player_handstandjump
     mask_index = spr_player_mask
     if (((!grounded) && (place_meeting((x + hsp), y, obj_solid) || scr_solid_slope((x + hsp), y)) && (!(place_meeting((x + hsp), y, obj_destructibles)))) || (grounded && (place_meeting((x + sign(hsp)), (y - 16), obj_solid) || scr_solid_slope((x + sign(hsp)), (y - 16))) && (!(place_meeting((x + hsp), y, obj_destructibles))) && (!(place_meeting((x + hsp), y, obj_metalblock))) && scr_slope()))
     {
-        if key_attack
+        var _climb = true
+        if _climb
         {
-            wallspeed = movespeed
-            if (vsp > 0)
-                wallspeed -= vsp
+            wallspeed = 6
             state = (37 << 0)
         }
     }
-    if ((grounded || (!key_attack)) && scr_solid((x + xscale), y) && (!(place_meeting((x + sign(hsp)), y, obj_destructibles))) && ((!(place_meeting((x + sign(hsp)), y, obj_slope))) || scr_solid_slope((x + sign(hsp)), y)))
+    if (grounded && scr_solid((x + xscale), y) && (!(place_meeting((x + sign(hsp)), y, obj_destructibles))) && ((!(place_meeting((x + sign(hsp)), y, obj_slope))) || scr_solid_slope((x + sign(hsp)), y)))
     {
         var _bump = ledge_bump((vsp >= 0 ? 32 : 22))
         if _bump
         {
-            jumpstop = 1
+            jumpstop = true
             state = (92 << 0)
             vsp = -4
             sprite_index = spr_suplexbump
-            instance_create((x + (xscale * 10)), (y + 10), obj_bumpeffect)
+            instance_create((x + xscale * 10), (y + 10), obj_bumpeffect)
         }
     }
     if ((!instance_exists(obj_slidecloud)) && grounded && movespeed > 5)

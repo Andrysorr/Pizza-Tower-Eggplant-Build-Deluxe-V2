@@ -21,8 +21,6 @@ function scr_player_tumble() //scr_player_tumble
         sprite_index = spr_player_machroll
         image_index = 0
     }
-    if (grounded && sprite_index != spr_tumble)
-        movespeed -= 0.05
     if (sprite_index == spr_dive && key_jump)
     {
         sprite_index = spr_player_groundpoundcancel1
